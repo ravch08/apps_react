@@ -1,11 +1,29 @@
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { supabase } from "./supabase";
 
+import { svgEmpty } from "../../utils/data";
 import { BackButton } from "../../utils/helper";
+
+type taskProps = Promise<string[]>;
 
 const TodoList = () => {
   const [todoItem, setTodoItem] = useState("");
-  const [todoList, setTodoList] = useState<string[]>([]);
+  const [todoList, setTodoList] = useState([]);
+
+  async function getTasks(): taskProps {
+    const { data: tasks } = await supabase.from("tasks").select("*");
+    setTodoList(tasks);
+  }
+
+  getTasks();
+
+  // if (error) {
+  //   console.error(error);
+  //   throw new Error(`Could not load the tasks!`);
+  // }
+
+  console.log(todoList);
 
   const addTodoItems = (e) => {
     e.preventDefault();
@@ -46,21 +64,26 @@ const TodoList = () => {
             />
           </form>
 
-          <ul className="flex w-2/4 flex-col items-start gap-2">
-            {todoList.map((item, idx) => (
-              <li key={uuidv4()} className="flex w-full justify-center">
-                <span className="mr-4 w-2/3 rounded-md bg-zinc-300 p-2">
-                  {item}
-                </span>
-                <a
-                  href="#!"
-                  className="btn-delete"
-                  onClick={() => deleteToDoItem(idx)}
-                >
-                  DELETE
-                </a>
-              </li>
-            ))}
+          <ul className="flex w-3/4 flex-col items-center gap-2 rounded-md bg-slate-100 p-16 text-center">
+            {todoList.length === 0
+              ? svgEmpty
+              : todoList.map((item, idx) => (
+                  <li
+                    key={uuidv4()}
+                    className="flex w-full justify-center text-left"
+                  >
+                    <span className="mr-4 w-2/3 rounded-md bg-zinc-300 px-6 py-2">
+                      {item}
+                    </span>
+                    <a
+                      href="#!"
+                      className="btn-delete"
+                      onClick={() => deleteToDoItem(idx)}
+                    >
+                      DELETE
+                    </a>
+                  </li>
+                ))}
           </ul>
         </div>
       </div>
