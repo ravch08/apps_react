@@ -11,6 +11,9 @@ const Home = () => {
           <Link to="counter" className="app-link">
             Counter
           </Link>
+          <Link to="count-reducer" className="app-link">
+            CountReducer
+          </Link>
           <Link to="timer" className="app-link">
             Timer
           </Link>

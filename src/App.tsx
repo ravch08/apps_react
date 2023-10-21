@@ -6,6 +6,7 @@ import CheckedDelete from "./components/Mid/CheckedDelete";
 
 import {
   Count,
+  CountReducer,
   CountryDropdown,
   Fetch,
   Home,
@@ -33,6 +34,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="pagination" element={<PaginationAPI />} />
           <Route path="counter" element={<Count />} />
+          <Route path="count-reducer" element={<CountReducer />} />
           <Route path="timer" element={<Timer />} />
           <Route path="fetch" element={<Fetch />} />
           <Route path="navtabs" element={<NavTabs />} />

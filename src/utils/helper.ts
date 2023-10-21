@@ -1,4 +1,5 @@
 export { default as Count } from "../components/count/Count.tsx";
+export { default as CountReducer } from "../components/countReducer/CountReducer.tsx";
 export { default as CountryDropdown } from "../components/countryDropdown/CountryDropdown.tsx";
 export { default as Fetch } from "../components/fetch/Fetch.tsx";
 export { default as NavTabs } from "../components/navtabs/NavTabs.tsx";

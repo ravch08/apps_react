@@ -1,31 +1,14 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { supabase } from "./supabase";
 
 import { svgEmpty } from "../../utils/data";
 import { BackButton } from "../../utils/helper";
-
-type taskProps = Promise<string[]>;
 
 const TodoList = () => {
   const [todoItem, setTodoItem] = useState("");
   const [todoList, setTodoList] = useState([]);
 
-  async function getTasks(): taskProps {
-    const { data: tasks } = await supabase.from("tasks").select("*");
-    setTodoList(tasks);
-  }
-
-  getTasks();
-
-  // if (error) {
-  //   console.error(error);
-  //   throw new Error(`Could not load the tasks!`);
-  // }
-
-  console.log(todoList);
-
-  const addTodoItems = (e) => {
+  const addTodoItems = (e: FormEvent) => {
     e.preventDefault();
     if (!todoItem) return;
     setTodoList((prevList) => [...prevList, todoItem.trim()]);
@@ -52,8 +35,8 @@ const TodoList = () => {
               autoFocus
               type="text"
               value={todoItem}
-              className="mx-2 w-2/3 bg-slate-200 p-2"
               placeholder="Enter items here..."
+              className="mx-2 w-2/3 bg-slate-200 p-2"
               onChange={(e) => setTodoItem(e.target.value)}
             />
             <input
