@@ -26,6 +26,12 @@ const Home = () => {
           <Link to="navtabs" className="app-link">
             NavTabs
           </Link>
+          <Link to="color" className="app-link">
+            Hex Picker
+          </Link>
+          <Link to="nested" className="app-link">
+            Nested
+          </Link>
           <Link to="radio" className="app-link">
             Radio
           </Link>

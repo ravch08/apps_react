@@ -18,8 +18,8 @@ const NavTabs = () => {
             {tabsContent.map((tab, index) => (
               <button
                 key={tab.id}
-                className={`btn-tab ${activeTab === index ? "activeTab" : ""}`}
                 onClick={() => handleTabClick(index)}
+                className={`btn-tab ${activeTab === index ? "activeTab" : ""}`}
               >
                 {tab.title}
               </button>

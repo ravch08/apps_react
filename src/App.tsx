@@ -5,12 +5,14 @@ import CheckBoxList from "./components/Mid/CheckBoxList";
 import CheckedDelete from "./components/Mid/CheckedDelete";
 
 import {
+  ColorPicker,
   Count,
   CountReducer,
   CountryDropdown,
   Fetch,
   Home,
   NavTabs,
+  Nested,
   Page404,
   PaginationAPI,
   Radio,
@@ -36,6 +38,8 @@ function App() {
           <Route path="counter" element={<Count />} />
           <Route path="count-reducer" element={<CountReducer />} />
           <Route path="timer" element={<Timer />} />
+          <Route path="nested" element={<Nested />} />
+          <Route path="color" element={<ColorPicker />} />
           <Route path="fetch" element={<Fetch />} />
           <Route path="navtabs" element={<NavTabs />} />
           <Route path="todo" element={<ToDoList />} />

@@ -43,4 +43,12 @@
   .red {
     @apply bg-red-600;
   }
+
+  .d-none {
+    display: none;
+  }
+
+  .btn-green {
+    @apply mt-12 rounded-md bg-green-500 px-8 py-2 text-white transition-colors duration-300 ease-in-out hover:bg-slate-700;
+  }
 }
