@@ -9,6 +9,7 @@ export { default as PaginationAPI } from "../components/pagination/PaginationAPI
 export { default as Radio } from "../components/radio/Radio.tsx";
 export { default as Timer } from "../components/timer/Timer.tsx";
 export { default as ToDoList } from "../components/todoList/TodoList.tsx";
+export { default as Wordweb } from "../components/wordweb/Wordweb.tsx";
 
 export { default as Home } from "../pages/Home.tsx";
 export { default as Page404 } from "../pages/Page404.tsx";

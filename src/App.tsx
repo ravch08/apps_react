@@ -18,6 +18,7 @@ import {
   Radio,
   Timer,
   ToDoList,
+  Wordweb,
 } from "./utils/helper";
 
 const queryClient = new QueryClient({
@@ -42,11 +43,12 @@ function App() {
           <Route path="color" element={<ColorPicker />} />
           <Route path="fetch" element={<Fetch />} />
           <Route path="navtabs" element={<NavTabs />} />
+          <Route path="wordweb" element={<Wordweb />} />
           <Route path="todo" element={<ToDoList />} />
           <Route path="radio" element={<Radio />} />
+          <Route path="country-dropdown" element={<CountryDropdown />} />
           <Route path="checked" element={<CheckBoxList />} />
           <Route path="checkdelete" element={<CheckedDelete />} />
-          <Route path="country-dropdown" element={<CountryDropdown />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>

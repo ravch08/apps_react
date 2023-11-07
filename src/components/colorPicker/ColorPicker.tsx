@@ -1,33 +1,6 @@
 import { useEffect, useState } from "react";
 import BackButton from "../../layout/BackButton";
-
-const colors = [
-  {
-    id: 1,
-    answer: "#818FB4",
-    options: ["#363062", "#435585", "#818FB4"],
-  },
-  {
-    id: 2,
-    answer: "#B6FFFA",
-    options: ["#B6FFFA", "#98E4FF", "#80B3FF"],
-  },
-  {
-    id: 3,
-    answer: "#04364A",
-    options: ["#176B87", "#04364A", "#64CCC5"],
-  },
-  {
-    id: 4,
-    answer: "#7C81AD",
-    options: ["#2E4374", "#4B527E", "#7C81AD"],
-  },
-  {
-    id: 5,
-    answer: "#D7E5CA",
-    options: ["#F9F3CC", "#D7E5CA", "#4B527E"],
-  },
-];
+import { colors } from "../../utils/data";
 
 const ColorPicker = () => {
   const [value, setValue] = useState(0);
