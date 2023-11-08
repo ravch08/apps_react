@@ -35,6 +35,9 @@ const Home = () => {
           <Link to="wordweb" className="app-link">
             WordWeb
           </Link>
+          <Link to="circles" className="app-link">
+            Circles
+          </Link>
           <Link to="radio" className="app-link">
             Radio
           </Link>

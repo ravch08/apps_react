@@ -9,6 +9,7 @@ import {
   Count,
   CountReducer,
   CountryDropdown,
+  CreateCircles,
   Fetch,
   Home,
   NavTabs,
@@ -44,6 +45,7 @@ function App() {
           <Route path="fetch" element={<Fetch />} />
           <Route path="navtabs" element={<NavTabs />} />
           <Route path="wordweb" element={<Wordweb />} />
+          <Route path="circles" element={<CreateCircles />} />
           <Route path="todo" element={<ToDoList />} />
           <Route path="radio" element={<Radio />} />
           <Route path="country-dropdown" element={<CountryDropdown />} />
