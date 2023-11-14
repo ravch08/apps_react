@@ -16,9 +16,13 @@ import {
   Nested,
   Page404,
   PaginationAPI,
+  PrivateRoute,
   Radio,
+  SignIn,
+  SignUp,
   Timer,
   ToDoList,
+  ToDoList2,
   Wordweb,
 } from "./utils/helper";
 
@@ -35,7 +39,16 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="signin" element={<SignIn />} />
+          <Route path="signup" element={<SignUp />} />
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
           <Route path="pagination" element={<PaginationAPI />} />
           <Route path="counter" element={<Count />} />
           <Route path="count-reducer" element={<CountReducer />} />
@@ -47,6 +60,7 @@ function App() {
           <Route path="wordweb" element={<Wordweb />} />
           <Route path="circles" element={<CreateCircles />} />
           <Route path="todo" element={<ToDoList />} />
+          <Route path="todo2" element={<ToDoList2 />} />
           <Route path="radio" element={<Radio />} />
           <Route path="country-dropdown" element={<CountryDropdown />} />
           <Route path="checked" element={<CheckBoxList />} />

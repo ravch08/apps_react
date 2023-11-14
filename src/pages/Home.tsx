@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
+import { Logout } from "../utils/helper";
 
 const Home = () => {
   return (
     <main>
       <div className="container mx-auto py-16">
+        <Logout />
         <h2 className="mb-16 text-center font-sans text-5xl font-extrabold text-yellow-700">
           APPS
         </h2>
@@ -46,6 +48,9 @@ const Home = () => {
           </Link>
           <Link to="todo" className="app-link">
             To-Do List
+          </Link>
+          <Link to="todo2" className="app-link">
+            Todo List 2
           </Link>
           <Link to="checked" className="app-link red">
             Checked

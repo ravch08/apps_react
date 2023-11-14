@@ -6,7 +6,7 @@ import { BackButton } from "../../utils/helper";
 
 const TodoList = () => {
   const [todoItem, setTodoItem] = useState("");
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState<string[]>([]);
 
   const addTodoItems = (e: FormEvent) => {
     e.preventDefault();
@@ -16,7 +16,6 @@ const TodoList = () => {
   };
 
   const deleteToDoItem = (id: number): void => {
-    console.log(id);
     const updatedToDoList = todoList.filter((_, index) => index !== id);
     setTodoList(updatedToDoList);
   };
