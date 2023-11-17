@@ -1,8 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import CheckBoxList from "./components/Mid/CheckBoxList";
-import CheckedDelete from "./components/Mid/CheckedDelete";
 
 import {
   ColorPicker,
@@ -64,11 +62,9 @@ function App() {
           <Route path="circles" element={<CreateCircles />} />
           <Route path="password" element={<Password />} />
           <Route path="todo" element={<ToDoList />} />
-          <Route path="todo2" element={<ToDoList2 />} />
+          <Route path="todo-delete" element={<ToDoList2 />} />
           <Route path="radio" element={<Radio />} />
           <Route path="country-dropdown" element={<CountryDropdown />} />
-          <Route path="checked" element={<CheckBoxList />} />
-          <Route path="checkdelete" element={<CheckedDelete />} />
           <Route path="*" element={<Page404 />} />
         </Routes>
       </BrowserRouter>

@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { v4 as uuid } from "uuid";
+
 import BackButton from "../../layout/BackButton";
 import { colors } from "../../utils/data";
 
@@ -11,7 +13,7 @@ const ColorPicker = () => {
     setAnswer(colors[value].answer);
   }, [value]);
 
-  const handleSelection = (e) => {
+  const handleSelection = (e: React.MouseEvent<HTMLButtonElement>) => {
     const selectedOption = e.target.textContent;
 
     if (selectedOption === answer) {
@@ -51,9 +53,9 @@ const ColorPicker = () => {
               className={` mb-12 h-40 w-2/4 border border-gray-100`}
             ></div>
             <div className="flex gap-4">
-              {colors[value].options.map((option, idx) => (
+              {colors[value].options.map((option) => (
                 <button
-                  key={idx}
+                  key={uuid()}
                   onClick={handleSelection}
                   className="rounded-md bg-slate-500 px-8 py-2 text-white transition-colors duration-300 ease-in-out hover:bg-slate-700"
                 >

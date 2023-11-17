@@ -53,16 +53,10 @@ const Home = () => {
             Country
           </Link>
           <Link to="todo" className="app-link">
-            To-Do List
+            ToDo List 1
           </Link>
-          <Link to="todo2" className="app-link">
-            Todo List 2
-          </Link>
-          <Link to="checked" className="app-link red">
-            Checked
-          </Link>
-          <Link to="checkdelete" className="app-link red">
-            CheckDelete
+          <Link to="todo-delete" className="app-link">
+            ToDo List 2
           </Link>
         </div>
       </div>
