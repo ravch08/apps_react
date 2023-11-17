@@ -16,11 +16,17 @@ const Home = () => {
           <Link to="count-reducer" className="app-link">
             CountReducer
           </Link>
+          <Link to="step-counter" className="app-link">
+            StepCounter
+          </Link>
           <Link to="timer" className="app-link">
             Timer
           </Link>
           <Link to="pagination" className="app-link">
             Pagination
+          </Link>
+          <Link to="password" className="app-link">
+            Password
           </Link>
           <Link to="fetch" className="app-link">
             Fetch

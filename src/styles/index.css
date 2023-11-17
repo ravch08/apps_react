@@ -55,4 +55,8 @@
   .point {
     @apply absolute text-2xl text-white;
   }
+
+  .inputEl {
+    @apply mb-4 border-none bg-slate-300 px-4 py-2 outline-none;
+  }
 }

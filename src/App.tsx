@@ -16,10 +16,12 @@ import {
   Nested,
   Page404,
   PaginationAPI,
+  Password,
   PrivateRoute,
   Radio,
   SignIn,
   SignUp,
+  StepCounter,
   Timer,
   ToDoList,
   ToDoList2,
@@ -52,6 +54,7 @@ function App() {
           <Route path="pagination" element={<PaginationAPI />} />
           <Route path="counter" element={<Count />} />
           <Route path="count-reducer" element={<CountReducer />} />
+          <Route path="step-counter" element={<StepCounter />} />
           <Route path="timer" element={<Timer />} />
           <Route path="nested" element={<Nested />} />
           <Route path="color" element={<ColorPicker />} />
@@ -59,6 +62,7 @@ function App() {
           <Route path="navtabs" element={<NavTabs />} />
           <Route path="wordweb" element={<Wordweb />} />
           <Route path="circles" element={<CreateCircles />} />
+          <Route path="password" element={<Password />} />
           <Route path="todo" element={<ToDoList />} />
           <Route path="todo2" element={<ToDoList2 />} />
           <Route path="radio" element={<Radio />} />
